@@ -48,11 +48,17 @@ function devision(sum) {
     return result;
 }
 
+function resetTheCalculator(sum) {
+    sum = Number(0);
+    alert("Calculator has succesfully been reseted");
+    return sum;
+}
+
 
 let sum = 0
 while (true) {
 
-    let key = prompt("What You want to do? { + - / * }");
+    let key = prompt("What You want to do? { + - / * } or reset the calculator { 0 }");
 
     switch (key) {
         case "+":
@@ -70,6 +76,9 @@ while (true) {
         case "*":
             sum = multiply(sum);
             alert(`Your total is: ${sum}`)
+            break;
+        case "0":
+            sum = resetTheCalculator(sum);
             break;
         default:
     }
