@@ -5,7 +5,7 @@ function tryParse() {
     while (a == 0) {
 
         let promptNumber = Number(prompt("Please enter the number:"));
-        while (NaN(promptNumber)) {
+        while (!isNaN(promptNumber)) {
             a = 1
             return promptNumber;
 
@@ -14,10 +14,10 @@ function tryParse() {
 
 }
 
-function addtion(sum) {
-
+function addtion() {
+    let sum = 0;
     console.log(sum + tryParse())
 }
-
+addtion()
 
 
